@@ -6,7 +6,7 @@ const handleProfileSignup = (firstName, lastName, fileName) => Promise.allSettle
   uploadPhoto(fileName),
 ]).then((values) => values.map((item) => ({
   status: item.status,
-  value: item.value || item.reason,
+  value: item.value && item.reason,
 })));
 
 export default handleProfileSignup;
