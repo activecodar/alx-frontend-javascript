@@ -1,4 +1,6 @@
-import Currency from "./3-currency.js";
+import SkyHighBuilding from './6-sky_high.js';
 
-const dollar = new Currency('$', 'Dollars');
-console.log(dollar.displayFullCurrency());
+const building = new SkyHighBuilding(140, 60);
+console.log(building.sqft);
+console.log(building.floors);
+console.log(building.evacuationWarningMessage());

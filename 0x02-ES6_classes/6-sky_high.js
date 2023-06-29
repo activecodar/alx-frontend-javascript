@@ -7,11 +7,11 @@ class SkyHighBuilding extends Building {
   }
 
   get floors() {
-    return this._floors;
+    return (this._floors);
   }
 
   evacuationWarningMessage() {
-    return `Evacuate the ${this.floors} floors slowly`;
+    return (`Evacuate slowly the ${this.floors} floors`);
   }
 }
 
