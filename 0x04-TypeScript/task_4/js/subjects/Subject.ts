@@ -1,5 +1,12 @@
 /// <reference path="Teacher.ts" />
 
 namespace Subjects {
-    class Subject 
-}
+    export class Subject {
+      private teacher: Teacher;
+  
+      public setTeacher(teacher: Teacher): void {
+        this.teacher = teacher;
+      }
+    }
+  }
+  
