@@ -50,3 +50,26 @@ const createEmployee = (salary: number | string): Director | Teacher => {
     }
 
 }
+
+const isDirector = (employee: Director | Teacher): boolean => {
+    return employee instanceof Director;
+}
+
+const executeWork = (employee: Director | Teacher): string => {
+    if(isDirector(employee)){
+        return employee.workDirectorTasks();
+    } else {
+        return employee.workTeacherTasks();
+    }
+}
+
+type Subjects = "Math" | "History";
+
+const teachClass = (todayClass: Subjects): string => {
+    if (todayClass === "Math")
+    {
+        return "Teaching Math";
+    } else if (todayClass === "History"){
+        return "Teaching History"
+    }
+}
